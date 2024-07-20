@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/bg-fundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;background-position: center;
+}
+
+.container {
+    position: relative;
+    padding: 5px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #11fa09, #23f5ea);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+        .botao {
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: 700;
+            border: none;
+            background-color: black;
+            color: yellow;
+            box-shadow: 7px 7px 10px #0f0f0fb4;
+        }
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    margin: auto;
+    color: white;
+    border-radius: 15px;
+    filter: blur(0);
+    transition: filter 0.3s ease;
+}
+
+.container:hover::before {
+    background: linear-gradient(180deg, #11fa09, #23f5ea);
+    filter: blur(42px);
+}
+
+.container::before {
+    filter: blur(12px);
+}
